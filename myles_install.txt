@@ -1,0 +1,4 @@
+macOS:
+cd build
+cmake -DCMAKE_INSTALL_PREFIX=/Users/litherum/src/harfbuzz/install ..
+cmake --build . --target install
