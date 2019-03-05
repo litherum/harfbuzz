@@ -45,6 +45,7 @@ endif ()
 if (WIN32)
   option(HB_HAVE_UNISCRIBE "Enable Uniscribe shaper backend on Windows" OFF)
   option(HB_HAVE_DIRECTWRITE "Enable DirectWrite shaper backend on Windows" OFF)
+  option(HB_UWP "Use UWP API" ON)
 endif ()
 option(HB_BUILD_UTILS "Build harfbuzz utils, needs cairo, freetype, and glib properly be installed" OFF)
 if (HB_BUILD_UTILS)
@@ -257,6 +258,9 @@ set (subset_project_headers
   ${HB_SUBSET_headers}
 )
 
+if (HB_UWP)
+  add_definitions(-DWINAPI_FAMILY=WINAPI_FAMILY_APP)
+endif ()
 
 ## Find and include needed header folders and libraries
 if (HB_HAVE_FREETYPE)
