@@ -1,7 +1,7 @@
 macOS:
 cd build
-CFLAGS="-O0 -g" CXXFLAGS="-O0 -g" cmake -DCMAKE_INSTALL_PREFIX=/Users/litherum/src/harfbuzz/install ..
-CFLAGS="-O0 -g" CXXFLAGS="-O0 -g" cmake --build . --target install
+VERBOSE=1 CPPFLAGS="-DHB_DEBUG=500" CFLAGS="-DHB_DEBUG=500 -O0 -g" CXXFLAGS="-DHB_DEBUG=500 -O0 -g" cmake -DCMAKE_INSTALL_PREFIX=/Users/litherum/src/harfbuzz/install ..
+VERBOSE=1 CPPFLAGS="-DHB_DEBUG=500" CFLAGS="-DHB_DEBUG=500 -O0 -g" CXXFLAGS="-DHB_DEBUG=500 -O0 -g" cmake --build . --target install
 
 Windows:
 cmake -A x64 -DCMAKE_INSTALL_PREFIX="C:\Users\lithe\source\repos\harfbuzz\install" ..
