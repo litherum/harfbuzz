@@ -1157,7 +1157,7 @@ static inline bool apply_lookup (hb_ot_apply_context_t *c,
        * https://bugs.chromium.org/p/chromium/issues/detail?id=659496 */
       end = match_positions[idx];
       /* There can't be any further changes. */
-      break;
+      //break;
     }
 
     unsigned int next = idx + 1; /* next now is the position after the recursed lookup. */
