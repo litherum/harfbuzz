@@ -39,7 +39,7 @@
 #define HB_MAX_NESTING_LEVEL	4294967294
 #endif
 #ifndef HB_MAX_CONTEXT_LENGTH
-#define HB_MAX_CONTEXT_LENGTH	64
+#define HB_MAX_CONTEXT_LENGTH	640
 #endif
 #ifndef HB_CLOSURE_MAX_STAGES
 /*
@@ -48,7 +48,7 @@
  * This must be larger than the number of times add_pause() is
  * called in a collect_features call of any shaper.
  */
-#define HB_CLOSURE_MAX_STAGES	32
+#define HB_CLOSURE_MAX_STAGES	320
 #endif
 
 #ifndef HB_MAX_SCRIPTS
